@@ -1,5 +1,5 @@
 
-# Full setup
+## Full setup
 
 Some reveal.js features, like external Markdown and speaker notes, require that presentations run from a local web server. The following instructions will set up such a server as well as all of the development tasks needed to make edits to the reveal.js source code.
 
@@ -32,7 +32,7 @@ Some reveal.js features, like external Markdown and speaker notes, require that 
    You can change the port by using `grunt serve --port 8001`.
 
 
-# Folder Structure
+## Folder Structure
 - **css/** Core styles without which the project does not function
 - **js/** Like above but for JavaScript
 - **plugin/** Components that have been developed as extensions to reveal.js
