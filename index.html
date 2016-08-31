@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>reveal.js – The HTML Presentation Framework</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<!-- intro -->
+				<section>
+					<h1>Network Test Tools</h1>
+					<p>Huang XiaoQing</p>
+				</section>
+
+				<!-- Agenda -->
+				<section>
+					<section>
+						<h2>Agenda</h2>
+						<ul>
+							<li class="fragment">Introduce</li>
+							<li class="fragment">NLC - Network link conditioner</li>
+							<li class="fragment">NEWT - Network Emulator for Windows Toolkit</li>
+							<li class="fragment">ATC - Augmented Traffic Control</li>
+							<li class="fragment">Attachment</li>
+						</ul>
+					</section>
+				</section>
+
+				<!-- Introduce -->
+				<section>
+				<section>
+					<h2>Indroduce</h2>
+                    <p class="fragment">A kind of tools, which could simulate different network conditions to connect to internet.</p>
+				</section>
+					<section>
+						<h3>Network mode</h3>
+						<ul class="fragment">
+                        		<li class="fragment">WIFI (Default)</li>
+                        		<li class="fragment">LTE (Up: 50Mb/s, down: 100Mb/s)</li>
+                        		<li class="fragment">3G (Up: 128Kb/s, down: 1920Kb/s)</li>
+                        		<li class="fragment">2G (Up: 118Kb/s, down: 236Kb/s)</li>
+                        		<li class="fragment">Week network connection</li>
+                        </ul>
+					</section>
+					<section>
+						<h3>Central parameters</h3>
+						<ul class="fragment">
+							<!-- 带宽是最大传输速率，单位：Mbps；速率是单位时间内承载的数据量，单位：MB/s或KB/s；1Mbps=1/8(MB/s)=128KB/s -->
+                        		<li class="fragment">Bandwidth</li>
+                        		<li class="fragment">Latency</li>
+                        		<li class="fragment">Packet loss rate</li>
+                        		<li class="fragment">Error packet rate</li>
+                    	</ul>
+					</section>
+					<section>
+						<h3>What's knid of them?</h3>
+						<ul class="fragment">
+                        		<li class="fragment">IOS</li>
+                        		<li class="fragment">Windows</li>
+                        		<li class="fragment">Linux</li>
+                        </ul>
+					</section>
+				</section>
+
+				<!-- IOS Tool -->
+				<section>
+					<section>
+						<h2>Network link conditioner</h2>
+						<img class="fragment" src="./img/NetworkTool_NTC.png" height="400px">
+					</section>
+					<section>
+						<h3>How to use it</h3>
+						<a href="https://www.evernote.com/l/AfbWKBCu0oJJn4JlFLafRPcCQsmGIBj9Tkk">Instructions for use</a>
+					</section>
+					<section>
+						<h3>Good practices</h3>
+								<ul class="fragment">
+									<li class="fragment">Easy to install</li>
+									<li class="fragment">Easy to use</li>
+									<li class="fragment">Test different network and usefully in week env</li>
+									<li class="fragment">Customize mode</li>
+									<li class="fragment">Install in PC and IOS Devices</li>
+									<li class="fragment">Other plateform device by AP</li>
+									<li class="fragment">Synchronous multi devices via AP on the same time</li>
+								</ul>
+					</section>
+					<section>
+						<h3>Bad practice</h3>
+						<p class="fragment">Limit on windowns OS</p>
+						<p class="fragment">Don't check log</p>
+					</section>
+					<section>
+						<h3>Found Bugs</h3>
+						<ul>
+							<li class="fragment">Bug1</li>
+								<p class="fragment">弱网下，loading图片依然不消失。解决方案：页面没有设置超时响应</P>
+						 	<li class="fragment">Bug2</li>
+						 		<p class="fragment">弱网下， js加载很慢，后面的图片加载不出来，会自动折行，导致父容器高度不断加大，解决方案：直接设置父容器一个固定高度</p>
+						</ul>
+					</section>
+				</section>
+
+				<!-- Micsoftware Tool-->
+				<section>
+					<section>
+						<h2>NEWT</h2>
+						<h3 class="fragment">Micsoftware -- Network Emulator for Windows Toolkit</h3>
+						<img class="fragment" src="./img/NetworkTool_NEWT.png" height="400px">
+					</section>
+					<section>
+						<h3>How to use</h3>
+						<ul>
+							<li class="fragment"><a href="https://onedrive.live.com/?authkey=%21AO8XD34WFOJGcLw&id=259DBF32D413DA06%21127&cid=259DBF32D413DA06">Download package</a></li>
+							<li class="fragment">Install NEWT application on server side</li>
+							<img class="fragment" src="./img/NEWT_Map.png" height="200px">
+						</ul>
+					</section>
+					<section>
+						<h3>Good practices</h3>
+						<ul>
+							<li class="fragment">Usefully in testing network protocol</li>
+							<li class="fragment">Easy to check logs</li>
+							<li class="fragment">Customize more complex network mode</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Bad practices</h3>
+						<ul>
+							<li class="fragment">More difficult settings</li>
+							<li class="fragment">Only one mode for multi users everytime</li>
+						</ul>
+					</section>
+				</section>
+				
+				<!-- Facebook Tool -->
+				<section>					
+					<section>
+						<h2>Augmented Traffic Control</h2>
+						<ul>
+							<li class="fragment">Facebook develop</li>
+							<li class="fragment">Use in Linux OS</li>
+						</ul>
+					</section>
+					<section>
+						<h3>How to use</h3>
+						<a class="fragment" href="https://github.com/facebook/augmented-traffic-control">Source code</a>
+					</section>
+					<section>
+						<h3>Good practices</h3>
+						<p class="fragment">Mostly like as Network link conditioner</p>
+						<p class="fragment">Asynchronous with multi devices via AP on the same time</p>
+					</section>
+					<section>
+						<h3>Bad practices</h3>
+						<p class="fragment">Most difficulte to setup env</p>
+						<p class="fragment">Don't install in device, need PC with wireless network card or independent wireless network card </p>
+					</section>
+				</section>
+
+				<!-- Attachment -->
+				<section>
+					<h2>Attachment</h2>
+					<p>Here's a list of network conditions with values from Comcast</p>
+					<img src="./img/NetworkConditionProfiles.png" height="400px">
+				</section>
+	
+				<!-- End -->
+				<section>
+					<h2><strong>Thanks !</strong></h2>
+				</section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
